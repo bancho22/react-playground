@@ -6,9 +6,9 @@ const ImageExplorerContainer = () => {
   const [images, setImages] = useState()
   const [selectedImageId, onSelectImageId] = useState()
   useEffect(() => {
-    setImages(new Array(33).fill(0).map((_, index) => ({
+    setImages(new Array(13).fill(0).map((_, index) => ({
       id: index,
-      ...imageMock
+      ...imageMock()
     })))
   }, [])
   return (
