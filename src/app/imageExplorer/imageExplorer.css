@@ -2,13 +2,23 @@
   display: flex;
   flex-direction: column;
   background-color: var(--appBackground);
-  height: 100vh;
-}
-
-.imageExplorer .app-link {
-  font-size: calc(10px + 2vmin);
+  height: 100%;
 }
 
 .imageExplorer .app-link, .explorerPane {
   padding: 20px;
+}
+
+.imageExplorer .app-link {
+  font-size: calc(10px + 2vmin);
+  width: max-content;
+}
+
+.imageExplorer .explorerPane {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imageExplorer .explorerPane .imageExplorerItem {
+  margin: 40px;
 }

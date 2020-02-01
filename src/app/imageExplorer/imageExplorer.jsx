@@ -3,17 +3,26 @@ import ImageExplorerItem from 'components/imageExplorerItem/imageExplorerItem'
 import AppLink from 'components/appLink/appLink'
 import './imageExplorer.css'
 
-const ImageExplorer = () => (
-  <div className='imageExplorer'>
+const ImageExplorer = ({images = [], selectedImageId, onSelectImageId}) => (
+  <div
+    className='imageExplorer'
+    onClick={() => onSelectImageId()}
+  >
     <AppLink to='/'>
       Go back
     </AppLink>
     <div className='explorerPane'>
-      <ImageExplorerItem
-        title='Nicolas Cage'
-        imageUrl='https://www.placecage.com/200/300'
-        imageAlt='cage'
-      />
+      {images.map(({id, title, imageUrl, imageAlt}) => (
+        <ImageExplorerItem
+          id={id}
+          key={id}
+          isSelected={selectedImageId === id}
+          onSelect={onSelectImageId}
+          title={title}
+          imageUrl={imageUrl}
+          imageAlt={imageAlt}
+        />
+      ))}
     </div>
   </div>
 )
