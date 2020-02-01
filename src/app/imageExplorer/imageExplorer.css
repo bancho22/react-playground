@@ -1,0 +1,14 @@
+.imageExplorer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--appBackground);
+  height: 100vh;
+}
+
+.imageExplorer .app-link {
+  font-size: calc(10px + 2vmin);
+}
+
+.imageExplorer .app-link, .explorerPane {
+  padding: 20px;
+}

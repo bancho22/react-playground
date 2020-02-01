@@ -1,6 +1,7 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ImageExplorer from 'app/imageExplorer/imageExplorer'
+import AppLink from 'components/appLink/appLink'
 import logo from '../logo.svg'
 import './app.css'
 
@@ -14,14 +15,10 @@ const App = () => (
             <p>
               Edit <code>src/</code> files and save to reload.
             </p>
-            <Link
-              className='app-link'
-              to='/images'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <span>Doodles:</span>
+            <AppLink to='/images'>
               Images
-            </Link>
+            </AppLink>
           </header>
         </div>
       </Route>
