@@ -9,7 +9,11 @@ const ImageExplorer = () => (
       Go back
     </AppLink>
     <div className='explorerPane'>
-      <ImageExplorerItem type='image' />
+      <ImageExplorerItem
+        title='Nicolas Cage'
+        imageUrl='https://www.placecage.com/200/300'
+        imageAlt='cage'
+      />
     </div>
   </div>
 )

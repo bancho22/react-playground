@@ -1,8 +1,11 @@
 import React from 'react'
+import classNames from 'classnames'
+import './imageExplorerItem.css'
 
-const ImageExplorerItem = () => (
-  <div className='imageExplorerItem'>
-    <img src='https://www.placecage.com/200/300' alt='cage' />
+const ImageExplorerItem = ({isSelected, title, imageUrl, imageAlt}) => (
+  <div className={classNames('imageExplorerItem', {selected: isSelected})}>
+    <img src={imageUrl} alt={imageAlt} />
+    <span className='title'>{title}</span>
   </div>
 )
 
