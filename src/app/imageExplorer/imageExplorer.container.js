@@ -5,6 +5,7 @@ import ImageExplorer from './imageExplorer'
 const ImageExplorerContainer = () => {
   const [images, setImages] = useState()
   const [selectedImageId, onSelectImageId] = useState()
+  const [draggedImageId, onSetDraggedImageId] = useState()
   useEffect(() => {
     setImages(new Array(13).fill(0).map((_, index) => ({
       id: index,
@@ -16,6 +17,8 @@ const ImageExplorerContainer = () => {
       images={images}
       selectedImageId={selectedImageId}
       onSelectImageId={onSelectImageId}
+      draggedImageId={draggedImageId}
+      onSetDraggedImageId={onSetDraggedImageId}
     />
   )
 }

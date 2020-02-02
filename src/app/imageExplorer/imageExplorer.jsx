@@ -3,7 +3,7 @@ import ImageExplorerItem from 'components/imageExplorerItem/imageExplorerItem'
 import AppLink from 'components/appLink/appLink'
 import './imageExplorer.css'
 
-const ImageExplorer = ({images = [], selectedImageId, onSelectImageId}) => (
+const ImageExplorer = ({images = [], selectedImageId, onSelectImageId, draggedImageId, onSetDraggedImageId}) => (
   <div
     className='imageExplorer'
     onClick={() => onSelectImageId()}
@@ -17,6 +17,8 @@ const ImageExplorer = ({images = [], selectedImageId, onSelectImageId}) => (
           id={id}
           key={id}
           isSelected={selectedImageId === id}
+          isDragged={draggedImageId === id}
+          onSetDraggedImageId={onSetDraggedImageId}
           onSelect={onSelectImageId}
           title={title}
           imageUrl={imageUrl}
