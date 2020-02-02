@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ImageExplorer from 'app/imageExplorer/imageExplorer.container'
 import AppLink from 'components/appLink/appLink'
-import logo from '../logo.svg'
+import logo from 'images/logo.svg'
 import './app.css'
 
 const App = () => (

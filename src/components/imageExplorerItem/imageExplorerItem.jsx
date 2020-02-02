@@ -10,7 +10,12 @@ const ImageExplorerItem = ({id, isSelected, isDragged, onSetDraggedImageId, onSe
       onSelect(id)
     }}
     draggable
-    onDragStart={() => onSetDraggedImageId(id)}
+    onDragStart={event => {
+      const image = new Image()
+      image.src = 'https://www.placecage.com/100/100'
+      event.dataTransfer.setDragImage(image, 100, 100)
+      onSetDraggedImageId(id)
+    }}
     onDragEnd={() => onSetDraggedImageId()}
   >
     <img src={imageUrl} alt={imageAlt} draggable={false} />
